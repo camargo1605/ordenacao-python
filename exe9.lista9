@@ -1,0 +1,14 @@
+def organiza(lista, pos, criterio):
+    # Define uma função chamada 'organiza' que recebe uma lista, uma posição e um critério como argumentos.
+    aux = lista[pos]
+    # Armazena o valor do elemento na posição 'pos' em uma variável auxiliar 'aux'.
+
+    while pos > 0 and lista[pos-1][criterio] > aux[criterio]:
+        # Continua o loop enquanto 'pos' for maior que 0 e o elemento anterior for maior que o atual, baseado no critério.
+        lista[pos] = lista[pos-1]
+        # Move o elemento anterior para a posição atual.
+        pos = pos - 1
+        # Decrementa 'pos' em 1, movendo para a próxima posição.
+
+    lista[pos] = aux
+    # Coloca o valor armazenado em 'aux' na posição correta.
