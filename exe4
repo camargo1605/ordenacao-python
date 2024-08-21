@@ -1,0 +1,32 @@
+def subir(lista):
+    # Define uma função chamada 'subir' que recebe uma lista como argumento.
+    pos = len(lista) - 1
+    # Define a posição inicial como o último índice da lista.
+    while pos > 0:
+        # Continua o loop enquanto a posição for maior que 0.
+        if lista[pos] < lista[pos-1]:
+            # Se o elemento atual for menor que o anterior, troca os dois.
+            aux = lista[pos]
+            # Guarda o valor do elemento atual em uma variável auxiliar.
+            lista[pos] = lista[pos-1]
+            # Coloca o valor do elemento anterior na posição atual.
+            lista[pos-1] = aux
+            # Coloca o valor da variável auxiliar na posição anterior.
+        pos = pos - 1
+        # Move para a próxima posição (um passo para trás na lista).
+
+def bubble_sort(lista):
+    # Define uma função chamada 'bubble_sort' que recebe uma lista como argumento.
+    for i in range(len(lista)):
+        # Repete o processo para cada elemento da lista.
+        subir(lista)
+        # Chama a função 'subir' para organizar os elementos.
+
+if __name__ == "__main__":
+    # Verifica se o script está sendo executado diretamente.
+    lst = ['Ana', 'Adriana', 'Alex', 'Andre', 'Audrey', 'Alana', 'Artur']
+    # Cria uma lista de nomes.
+    bubble_sort(lst)
+    # Chama a função 'bubble_sort' para ordenar a lista.
+    print(lst)
+    # Imprime a lista ordenada.
